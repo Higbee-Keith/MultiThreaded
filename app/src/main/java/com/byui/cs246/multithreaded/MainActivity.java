@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     File file;
     ArrayList<String> list;
     ArrayAdapter<String> numbersAdapter;
-    ListView listview;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.activity_main, R.id.textView, list);
 
         // Connect ArrayAdapter to ListView to be populated
-        listview = (ListView) findViewById(R.id.listView);
-        listview.setAdapter(numbersAdapter);
+        listView = (ListView) findViewById(R.id.listview);
+        listView.setAdapter(numbersAdapter);
     }
 
     /** Called when the Clear button is clicked **/
