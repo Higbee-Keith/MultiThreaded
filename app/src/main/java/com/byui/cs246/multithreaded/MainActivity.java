@@ -58,20 +58,18 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the Load button is clicked **/
     public void loadFile(View view) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+        BufferedReader bufferedReader =
+                new BufferedReader(new FileReader(file));
 
         list = new ArrayList<String>();
 
         // Read each line and pause
         try {
-            for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
+            for (String line = bufferedReader.readLine();
+                 line != null; line = bufferedReader.readLine()) {
                 list.add(line);
                 Thread.sleep(250);
             }
-            //while (bufferedReader.readLine() != null) {
-            //    list.add(bufferedReader.readLine());
-            //    Thread.sleep(250);
-            //}
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
